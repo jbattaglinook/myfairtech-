@@ -5,24 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MyFairTech - Dynamic Theme Example</title>
   <link id="theme-style" rel="stylesheet" href="style-pastel.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f7f8;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: #b996e3; /* lila pastel */
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    /* Dropdown container */
+    .theme-dropdown {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #fff;
+      font-size: 0.8rem;
+      user-select: none;
+    }
+    .theme-dropdown label {
+      cursor: pointer;
+      margin-right: 8px;
+      font-weight: 600;
+    }
+    .theme-dropdown select {
+      border-radius: 4px;
+      border: none;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>MyFairTech</h1>
     <p>Trusted IT Consulting & Cloud Infrastructure Solutions</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>Theme Switcher</h2>
-      <p>Select a visual style:</p>
-      <select id="theme-switcher">
+    <div class="theme-dropdown">
+      <label for="theme-switcher">Theme:</label>
+      <select id="theme-switcher" aria-label="Select theme">
         <option value="style-pastel.css">Pastel</option>
         <option value="style-dark.css">Dark</option>
         <option value="style-classic.css">Classic</option>
       </select>
-    </section>
+    </div>
+  </header>
 
+  <main>
     <section>
       <h2>What We Do</h2>
       <p>We provide comprehensive IT consulting services focused on cloud infrastructure, virtualization, and modern remote access solutions to empower your business.</p>
