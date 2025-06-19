@@ -3,79 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MyFairTech - Trusted IT Consulting & Cloud Solutions</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f7f8;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: #b996e3; /* lila pastel */
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      letter-spacing: 2px;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    h2 {
-      color: #7A5BAE; /* lavanda */
-      border-bottom: 3px solid #F7C6B6; /* durazno pastel */
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      padding: 8px 0;
-      border-bottom: 1px solid #e1e8ed;
-      font-weight: 500;
-    }
-    ul li:last-child {
-      border-bottom: none;
-    }
-    a {
-      color: #7A5BAE;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover {
-      color: #F7C6B6;
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 20px;
-      color: #555;
-      background: #EDEDED;
-      border-top: 1px solid #ddd;
-      margin-top: 50px;
-    }
-  </style>
+  <title>MyFairTech - Dynamic Theme Example</title>
+
+  <!-- Tema por defecto: pastel -->
+  <link id="theme-style" rel="stylesheet" href="style-pastel.css" />
 </head>
 <body>
   <header>
@@ -85,48 +16,38 @@
 
   <main>
     <section>
-      <h2>What We Do</h2>
-      <p>We provide comprehensive IT consulting services focused on cloud infrastructure, virtualization, and modern remote access solutions to empower your business.</p>
+      <h2>Theme Switcher</h2>
+      <p>Select a visual style:</p>
+      <select id="theme-switcher">
+        <option value="style-pastel.css">Pastel</option>
+        <option value="style-dark.css">Dark</option>
+        <option value="style-classic.css">Classic</option>
+      </select>
     </section>
 
     <section>
       <h2>Our Services</h2>
       <ul>
-        <li>Cloud infrastructure design & management</li>
-        <li>
-          Modernize your legacy applications — bring them to the web in simple steps, no reprogramming needed!<br />
-          <em style="color: #800080; font-weight: 600;">(This is pure Black Magic – as our friend Hernan says!)</em>
-        </li>
-        <li>ZTNA solutions — replace your old VPN workflow and modernize securely</li>
-        <li>Multi-language support: English, Spanish, Italian & Portuguese</li>
+        <li>Cloud Infrastructure</li>
+        <li>ZTNA Solutions</li>
+        <li>Legacy App Modernization</li>
       </ul>
     </section>
 
     <section>
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li>Years of experience solving complex IT challenges</li>
-        <li>
-          We take your business to the next level! Give it a try, it's free.
-          <a href="https://calendly.com/myfairtech" target="_blank" style="margin-left:8px;">
-            Schedule a POC
-          </a>
-        </li>
-        <li>Client-focused, reliable, and scalable solutions</li>
-      </ul>
-    </section>
-
-     <section>
       <h2>Contact Us</h2>
-      <p>Have a question, need a solution, or want to modernize your IT infrastructure?</p>
-      <p>📧 Email us at: <a href="mailto:myfairtech@gmail.com">myfairtech@gmail.com</a></p>
-      <p>📅 Prefer a quick call? <a href="https://calendly.com/myfairtech" target="_blank">Schedule a free consultation here</a></p>
-      <p>We speak English, Spanish, Italian and Portuguese. Reach out — let's solve it together.</p>
+      <p>Email: <a href="mailto:myfairtech@gmail.com">myfairtech@gmail.com</a></p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 MyFairTech. All rights reserved.
+    &copy; 2025 MyFairTech
   </footer>
+
+  <script>
+    document.getElementById('theme-switcher').addEventListener('change', function () {
+      document.getElementById('theme-style').href = this.value;
+    });
+  </script>
 </body>
 </html>
