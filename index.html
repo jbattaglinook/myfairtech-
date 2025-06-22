@@ -3,119 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MyFairTech</title>
-  <link rel="stylesheet" href="style-pastel.css" />
+  <title>MyFairTech - Consultoría y Soluciones TI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --color-lila: #b996e3;
+      --color-lila-oscuro: #8a6bc1;
+      --color-gris-fondo: #f4f7f8;
+      --color-texto: #222;
+      --color-blanco: #fff;
+      --color-cta: #7c56b4;
+      --color-cta-hover: #623d97;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0; padding: 0;
-      background: #f4f7f8;
-      color: #222;
+      font-family: 'Poppins', sans-serif;
+      background: var(--color-gris-fondo);
+      color: var(--color-texto);
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     header {
-      background: #b996e3;
-      color: #fff;
-      padding: 20px;
-    }
-    nav {
+      background: var(--color-lila);
+      color: var(--color-blanco);
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .nav-left h1 {
+    header h1 {
+      font-weight: 600;
       margin: 0;
       font-size: 1.8rem;
+      letter-spacing: 1.5px;
     }
-    .nav-center a {
-      margin: 0 10px;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--color-blanco);
       text-decoration: none;
-      color: #fff;
-      font-weight: 500;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
     }
-    .nav-center a:hover {
+    nav a:hover {
+      background-color: var(--color-lila-oscuro);
+    }
+    .language-selector a {
+      display: inline-block;
+      margin-left: 12px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .language-selector a:hover {
+      border-color: var(--color-blanco);
+    }
+    .language-selector img {
+      width: 26px;
+      height: 18px;
+      display: block;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .hero {
+      background: var(--color-blanco);
+      border-radius: 12px;
+      padding: 40px 30px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .hero h2 {
+      font-weight: 600;
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      color: var(--color-lila-oscuro);
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto 24px auto;
+      color: #555;
+    }
+    .btn-primary {
+      background-color: var(--color-cta);
+      color: var(--color-blanco);
+      padding: 12px 28px;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background-color: var(--color-cta-hover);
+    }
+
+    .services {
+      margin-top: 60px;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--color-blanco);
+      border-radius: 12px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      font-weight: 600;
+      margin-top: 0;
+      color: var(--color-lila);
+    }
+    .card p {
+      color: #444;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-section {
+      background: var(--color-lila);
+      color: var(--color-blanco);
+      margin: 80px 0 40px 0;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+    .contact-section h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .contact-section p {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+    .contact-section a {
+      color: var(--color-blanco);
+      font-weight: 600;
       text-decoration: underline;
     }
-    .language-selector a img {
-      width: 22px;
-      height: 15px;
-      margin-left: 8px;
-      border-radius: 3px;
-    }
-    main {
-      padding: 40px 20px;
-    }
+
     footer {
-      background: #b996e3;
-      color: #fff;
+      background: var(--color-lila-oscuro);
+      color: var(--color-blanco);
       text-align: center;
-      padding: 10px;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      nav {
+        gap: 10px;
+      }
+      .hero h2 {
+        font-size: 1.7rem;
+      }
+      main {
+        margin: 20px auto;
+        padding: 0 15px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <div class="nav-left">
-        <h1>MyFairTech</h1>
-      </div>
-      <div class="nav-center">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="casos.html">Casos</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-      </div>
-      <div class="language-selector">
-        <a href="index.html"><img src="https://flagcdn.com/es.svg" alt="ES" title="Español"></a>
-        <a href="index-en.html"><img src="https://flagcdn.com/gb.svg" alt="EN" title="Inglés"></a>
-        <a href="index-pt.html"><img src="https://flagcdn.com/br.svg" alt="PT" title="Portugués"></a>
-        <a href="index-it.html"><img src="https://flagcdn.com/it.svg" alt="IT" title="Italiano"></a>
-      </div>
-    </nav>
-  </header>
+<header>
+  <h1>MyFairTech</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="casos.html">Casos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="language-selector">
+    <a href="index.html" title="Español"><img src="https://flagcdn.com/es.svg" alt="ES" /></a>
+    <a href="index-en.html" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN" /></a>
+    <a href="index-pt.html" title="Português"><img src="https://flagcdn.com/br.svg" alt="PT" /></a>
+    <a href="index-it.html" title="Italiano"><img src="https://flagcdn.com/it.svg" alt="IT" /></a>
+  </div>
+</header>
 
-  <main>
-    <section>
-      <h2>Qué hacemos</h2>
-      <p>Ofrecemos servicios completos de consultoría TI enfocados en infraestructura en la nube, virtualización y soluciones modernas de acceso remoto para potenciar tu negocio.</p>
-    </section>
+<main>
+  <section class="hero">
+    <h2>Soluciones tecnológicas prácticas y a medida para tu empresa</h2>
+    <p>Ofrecemos servicios completos de consultoría TI enfocados en infraestructura en la nube, virtualización y soluciones modernas de acceso remoto para potenciar tu negocio.</p>
+    <a href="https://calendly.com/myfairtech" target="_blank" class="btn-primary">Agenda tu demo gratis</a>
+  </section>
 
-    <section>
-      <h2>Nuestros Servicios</h2>
-      <ul>
-        <li>Diseño y gestión de infraestructura en la nube</li>
-        <li>Modernización de aplicaciones legadas — llévalas a la web en simples pasos, ¡sin necesidad de reprogramar!</li>
-        <li>Solucciones ZTNA — reemplaza tu antigua VPN y moderniza con seguridad</li>
-        <li>Soporte multilingüe: Inglés, Español, Italiano y Portugués</li>
-      </ul>
-    </section>
+  <section class="services" aria-label="Servicios destacados">
+    <div class="card">
+      <h3>Consultoría</h3>
+      <p>Optimización de los procesos correctivos y predictivos. Identificación y eliminación de costos ocultos IT. Modernizamos infraestructura y workflows para soluciones prácticas y eficientes.</p>
+    </div>
+    <div class="card">
+      <h3>Soporte TI</h3>
+      <p>Plan a medida para asegurar disponibilidad y funcionalidad de servicios críticos. Tomamos a nuestro cargo las tareas de IT, potenciando sistemas y plataformas clave de tu empresa.</p>
+    </div>
+    <div class="card">
+      <h3>Modernización de Aplicaciones</h3>
+      <p>Llevamos tus aplicaciones legadas a la web sin necesidad de reprogramar, con soluciones seguras y escalables.</p>
+    </div>
+  </section>
 
-    <section>
-      <h2>Por qué elegirnos</h2>
-      <ul>
-        <li>Años de experiencia resolviendo desafíos complejos de TI</li>
-        <li>Llevamos tu negocio al siguiente nivel. ¡Pruébalo gratis!
-          <a href="https://calendly.com/myfairtech" target="_blank" style="margin-left:8px;">Agenda una prueba</a>
-        </li>
-        <li>Soluciones confiables, escalables y centradas en el cliente</li>
-      </ul>
-    </section>
+  <section class="contact-section" aria-label="Contacto">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes alguna pregunta o necesitas una solución? Escríbenos a <a href="mailto:myfairtech@gmail.com">myfairtech@gmail.com</a></p>
+    <p>¿Prefieres una llamada rápida? <a href="https://calendly.com/myfairtech" target="_blank">Agenda una consulta gratuita aquí</a></p>
+    <p>Hablamos Inglés, Español, Italiano y Portugués. ¡Hablemos!</p>
+  </section>
+</main>
 
-    <section>
-      <h2>Contáctanos</h2>
-      <p>¿Tienes alguna pregunta, necesitas una solución o quieres modernizar tu infraestructura TI?</p>
-      <p>📧 Escríbenos a: <a href="mailto:myfairtech@gmail.com">myfairtech@gmail.com</a></p>
-      <p>📅 ¿Prefieres una llamada rápida? <a href="https://calendly.com/myfairtech" target="_blank">Agenda una consulta gratuita aquí</a></p>
-      <p>Hablamos Inglés, Español, Italiano y Portugués. Contáctanos — resolvamos juntos.</p>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 MyFairTech. Todos los derechos reservados.
-  </footer>
+<footer>
+  &copy; 2025 MyFairTech. Todos los derechos reservados.
+</footer>
 
 </body>
 </html>
