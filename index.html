@@ -198,6 +198,43 @@
         padding: 0 15px;
       }
     }
+    /* Estilo para el dropdown de Servicios */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-blanco);
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border-radius: 6px;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  color: #444;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
   </style>
 </head>
 <body>
@@ -205,12 +242,24 @@
 <header>
   <h1>MyFairTech</h1>
   <nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="casos.html">Casos</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
+  <a href="index.html">Inicio</a>
+
+  <div class="dropdown">
+    <a href="servicios.html">Servicios ▾</a>
+    <div class="dropdown-content">
+      <a href="consultoria.html">Consultoría</a>
+      <a href="soporte.html">Soporte IT</a>
+      <a href="modernizacion.html">Modernización de Apps</a>
+      <a href="ztna.html">ZTNA / Acceso Remoto</a>
+      <a href="cloud.html">Infraestructura Cloud</a>
+    </div>
+  </div>
+
+  <a href="casos.html">Casos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
   <div class="language-selector">
     <a href="index.html" title="Español"><img src="https://flagcdn.com/es.svg" alt="ES" /></a>
     <a href="index-en.html" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN" /></a>
