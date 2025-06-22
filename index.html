@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MyFairTech - Dynamic Theme Example</title>
-  <link id="theme-style" rel="stylesheet" href="style-pastel.css" />
+  <title>MyFairTech</title>
+  <link rel="stylesheet" href="style-pastel.css" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,60 +14,67 @@
       line-height: 1.6;
     }
     header {
-      background: #b996e3; /* lila pastel */
+      background: #b996e3;
       color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      position: relative;
+      padding: 20px;
     }
-    header h1 {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-left h1 {
       margin: 0;
-      font-size: 2.8rem;
-      letter-spacing: 2px;
+      font-size: 1.8rem;
     }
-    header p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-
-    /* Dropdown container */
-    .theme-dropdown {
-      position: absolute;
-      top: 10px;
-      right: 20px;
+    .nav-center a {
+      margin: 0 10px;
+      text-decoration: none;
       color: #fff;
-      font-size: 0.8rem;
-      user-select: none;
+      font-weight: 500;
     }
-    .theme-dropdown label {
-      cursor: pointer;
-      margin-right: 8px;
-      font-weight: 600;
+    .nav-center a:hover {
+      text-decoration: underline;
     }
-    .theme-dropdown select {
-      border-radius: 4px;
-      border: none;
-      padding: 4px 8px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
+    .language-selector a img {
+      width: 22px;
+      height: 15px;
+      margin-left: 8px;
+      border-radius: 3px;
+    }
+    main {
+      padding: 40px 20px;
+    }
+    footer {
+      background: #b996e3;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>MyFairTech</h1>
-    <p>Trusted IT Consulting & Cloud Infrastructure Solutions</p>
 
-    <div class="theme-dropdown">
-      <label for="theme-switcher">Theme:</label>
-      <select id="theme-switcher" aria-label="Select theme">
-        <option value="style-pastel.css">Pastel</option>
-        <option value="style-dark.css">Dark</option>
-        <option value="style-classic.css">Classic</option>
-      </select>
-    </div>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <h1>MyFairTech</h1>
+      </div>
+      <div class="nav-center">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="casos.html">Casos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="language-selector">
+        <a href="index.html"><img src="https://flagcdn.com/es.svg" alt="ES" title="Español"></a>
+        <a href="index-en.html"><img src="https://flagcdn.com/gb.svg" alt="EN" title="English"></a>
+        <a href="index-pt.html"><img src="https://flagcdn.com/br.svg" alt="PT" title="Português"></a>
+        <a href="index-it.html"><img src="https://flagcdn.com/it.svg" alt="IT" title="Italiano"></a>
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -109,13 +116,8 @@
   </main>
 
   <footer>
-    &copy; 2025 MyFairTech. All rights reserved.
+    &copy; 2025 MyFairTech. Todos los derechos reservados.
   </footer>
 
-  <script>
-    document.getElementById('theme-switcher').addEventListener('change', function () {
-      document.getElementById('theme-style').href = this.value;
-    });
-  </script>
 </body>
 </html>
