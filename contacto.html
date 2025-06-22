@@ -4,37 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MyFairTech</title>
-  <link rel="stylesheet" href="style-pastel.css" />
+  <style>
+    body { font-family: sans-serif; margin: 0; background: #f4f7f8; }
+    header { background: #b996e3; color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    nav { display: flex; gap: 20px; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      z-index: 1;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .dropdown-content a {
+      color: #444;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown:hover .dropdown-content { display: block; }
+    .language-selector img { width: 26px; height: 18px; margin-left: 10px; border-radius: 3px; border: 2px solid transparent; }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="nav-left">
-        <h1>MyFairTech</h1>
+<header>
+  <h1>MyFairTech</h1>
+  <nav>
+    <a href="index-">Inicio</a>
+    <div class="dropdown">
+      <a href="servicios-">Servicios ▾</a>
+      <div class="dropdown-content">
+        <a href="consultoria-">Consultoría</a>
+        <a href="soporte-">Soporte IT</a>
+        <a href="modernizacion-">Modernización de Apps</a>
+        <a href="ztna-">ZTNA / Acceso Remoto</a>
+        <a href="cloud-">Infraestructura Cloud</a>
       </div>
-      <div class="nav-center">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="casos.html">Casos</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-      </div>
-      <div class="language-selector">
-        <a href="index.html"><img src="https://flagcdn.com/es.svg" alt="ES" title="Español"></a>
-        <a href="index-en.html"><img src="https://flagcdn.com/gb.svg" alt="EN" title="English"></a>
-        <a href="index-pt.html"><img src="https://flagcdn.com/br.svg" alt="PT" title="Português"></a>
-        <a href="index-it.html"><img src="https://flagcdn.com/it.svg" alt="IT" title="Italiano"></a>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Contacto</h2>
-      <p>Contenido de prueba para esta sección.</p>
-    </section>
-  </main>
-  <footer>
-    &copy; 2025 MyFairTech. Todos los derechos reservados.
-  </footer>
+    </div>
+    <a href="casos-">Casos</a>
+    <a href="nosotros-">Nosotros</a>
+    <a href="contacto-">Contacto</a>
+  </nav>
+  <div class="language-selector">
+    <a href="index.html"><img src="https://flagcdn.com/es.svg" alt="ES"></a>
+    <a href="index-en.html"><img src="https://flagcdn.com/gb.svg" alt="EN"></a>
+    <a href="index-pt.html"><img src="https://flagcdn.com/br.svg" alt="PT"></a>
+    <a href="index-it.html"><img src="https://flagcdn.com/it.svg" alt="IT"></a>
+  </div>
+</header>
+<main style="padding: 40px; text-align:center;">
+  <h2>Contacto</h2>
+  <p>Página de ejemplo en idioma ES - Contacto</p>
+</main>
+<footer style="text-align:center; background:#8a6bc1; color:white; padding:10px;">&copy; 2025 MyFairTech</footer>
 </body>
 </html>
