@@ -6,62 +6,39 @@ body {
   color: #222;
   line-height: 1.6;
 }
-
 header {
   background: #b996e3;
   color: #fff;
   padding: 20px;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-
 .nav-left h1 {
   margin: 0;
   font-size: 1.8rem;
 }
-
 .nav-center a {
   margin: 0 10px;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
 }
-
 .nav-center a:hover {
   text-decoration: underline;
 }
-
-.language-selector {
-  display: flex;
-  align-items: center;
-}
-
-.language-selector button {
-  background: none;
-  border: none;
-  cursor: pointer;
+.language-selector a img {
+  width: 22px;
+  height: 15px;
   margin-left: 8px;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  color: #fff;
+  border-radius: 3px;
 }
-
-.language-selector img {
-  width: 20px;
-  height: 14px;
-  margin-right: 5px;
-}
-
 main {
   padding: 40px 20px;
 }
-
 footer {
   background: #b996e3;
   color: #fff;
